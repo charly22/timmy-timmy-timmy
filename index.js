@@ -15,6 +15,8 @@ router.route('/')
 .get(function(req, res) {
     api({})
     .then(function(data){
+        console.log('salio');
+        // res.set('Content-Type', 'application/json; charset=iso-8859-1');
         res.json(data);
     }).catch(function(error){
         res.status(500).json(error);
